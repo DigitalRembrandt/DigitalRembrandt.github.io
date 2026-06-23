@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Solitaire Elite</title>
+  <meta name="description" content="The most elegant Solitaire experience on iPhone and iPad." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <!-- Left: company name → root landing page -->
+      <a href="../index.html" class="nav-company">Digital Rembrandt</a>
+      <!-- Center: app name -->
+      <a href="index.html" class="nav-logo">Solitaire Elite</a>
+      <!-- Right: page links + dark mode toggle -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <img src="icon.png" alt="Solitaire Elite app icon" class="hero-app-icon hero-load-1" />
+    <p class="hero-eyebrow hero-load-2">Now Available on the App Store</p>
+    <h1 class="hero-load-3">Solitaire Elite</h1>
+    <p class="hero-slogan hero-load-4">Solitaire, Perfected.</p>
+    <p class="hero-load-5">
+      A beautifully crafted Solitaire experience designed for iPhone and iPad.
+      Clean design, smooth animations, and timeless gameplay.
+    </p>
+    <a href="#" class="btn btn-primary hero-load-6">Download on the App Store</a>
+  </section>
+
+  <!-- ── Feature cards ── -->
+  <div class="features">
+    <div class="features-inner">
+      <h2 class="reveal">Everything you love about Solitaire.</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card" data-delay="0">
+          <div class="icon-wrap"><span class="icon">🃏</span></div>
+          <h3>Classic Gameplay</h3>
+          <p>The Klondike rules you know, refined to feel right at home on Apple devices.</p>
+        </div>
+
+        <div class="feature-card" data-delay="80">
+          <div class="icon-wrap"><span class="icon">✨</span></div>
+          <h3>Elegant Design</h3>
+          <p>Crisp cards, fluid animations, and a minimal interface that gets out of your way.</p>
+        </div>
+
+        <div class="feature-card" data-delay="160">
+          <div class="icon-wrap"><span class="icon">📵</span></div>
+          <h3>Fully Offline</h3>
+          <p>No account required. No ads. No tracking. Just cards. Play anywhere, anytime.</p>
+        </div>
+
+        <div class="feature-card" data-delay="240">
+          <div class="icon-wrap"><span class="icon">🌍</span></div>
+          <h3>Daily Challenges</h3>
+          <p>Every day, a new deal. The same for every player worldwide. Beat it, then compare
+             your time and move count with friends. One puzzle. One planet. Who played it best?</p>
+        </div>
+
+        <div class="feature-card accent-purple" data-delay="320">
+          <div class="icon-wrap"><span class="icon">🎨</span></div>
+          <h3>Personalize Everything</h3>
+          <p>Choose from beautiful card backs, customize your table background, and add
+             ambient visual effects to make every game feel uniquely yours.</p>
+        </div>
+
+        <div class="feature-card accent-blue" data-delay="400">
+          <div class="icon-wrap"><span class="icon">📊</span></div>
+          <h3>Advanced Statistics</h3>
+          <p>Detailed win/loss charts, streak analysis, timing trends, and full game history.
+             All the data you love, beautifully visualized.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Privacy callout ── -->
+  <section class="section privacy-callout reveal" style="text-align:center; max-width:100%; padding-left:22px; padding-right:22px;">
+    <div style="max-width:740px; margin:0 auto;">
+      <h2>Your privacy, by design.</h2>
+      <p>
+        Solitaire Elite collects zero personal data. No analytics, no ads, no tracking. Ever.
+        Your game data stays on your device and is never transmitted anywhere.
+      </p>
+      <a href="privacy.html" class="btn btn-secondary" style="margin-top:8px;">Read our Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-reveal: .reveal elements (headers, callout)
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Scroll-reveal: feature cards with staggered delays
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay || 0, 10);
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.feature-card').forEach(el => cardObserver.observe(el));
+  </script>
+
+</body>
+</html>

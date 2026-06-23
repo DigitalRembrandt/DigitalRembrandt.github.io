@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Digital Rembrandt</title>
+  <meta name="description" content="Independent app developer crafting premium experiences for iPhone, iPad, and Mac." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="index.html" class="nav-logo">Digital Rembrandt</a>
+      <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <!--
+      Logo is white on transparent — CSS filter: invert(1) makes it black for light mode.
+      In dark mode the filter is removed so it stays white.
+      Save your logo file as logo.png in this root folder.
+    -->
+    <img src="logo.png" alt="Digital Rembrandt" class="company-logo hero-load-1" />
+    <h1 class="hero-load-2">Digital Rembrandt</h1>
+    <p class="hero-tagline hero-load-3">Independent App Developer</p>
+    <p class="hero-load-4">
+      We craft premium experiences for iPhone, iPad, and Mac. Apps that feel
+      at home across Apple platforms, built with care for design, privacy, and the
+      people who use them every day.
+    </p>
+  </section>
+
+  <!-- ── Apps section ── -->
+  <section class="apps-section">
+    <div class="apps-inner">
+      <h2 class="reveal">Our Apps</h2>
+      <div class="app-grid">
+
+        <!-- Solitaire Elite card -->
+        <a href="solitaire-elite/index.html" class="app-card reveal">
+          <img src="solitaire-elite/icon.png" alt="Solitaire Elite icon" class="app-icon" />
+          <div class="app-info">
+            <h3>Solitaire Elite</h3>
+            <p>The most elegant Solitaire experience on iPhone and iPad. Classic gameplay, stunning design, zero tracking.</p>
+            <span class="app-link">Learn more →</span>
+          </div>
+        </a>
+
+        <!-- Placeholder for future apps — remove when you have a real one -->
+        <div class="app-card app-card--coming reveal">
+          <div class="app-icon app-icon--placeholder">?</div>
+          <div class="app-info">
+            <h3>Coming Soon</h3>
+            <p>Another beautifully crafted app is in the works. Stay tuned.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ── -->
+  <section class="about-section reveal">
+    <div class="about-inner">
+      <h2>Built with intent.</h2>
+      <p>
+        At Digital Rembrandt, every app starts with a single question: what would
+        this look like if it were done exactly right? We take our time, sweat the
+        details, and ship only when we're proud of what we've made.
+      </p>
+      <p>
+        We develop for iPhone, iPad, and Mac, building across Apple's platforms
+        with native tools and a consistent attention to craft. Our apps are private
+        by default, polished by design, and built to last. No subscriptions where
+        they aren't earned. No dark patterns. No bloat. Just software that respects you.
+      </p>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-reveal for .reveal elements
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>

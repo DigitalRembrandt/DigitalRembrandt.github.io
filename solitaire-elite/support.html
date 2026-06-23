@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Support | Solitaire Elite</title>
+  <meta name="description" content="Get help with Solitaire Elite." />
+  <link rel="stylesheet" href="style.css" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-company">Digital Rembrandt</a>
+      <a href="index.html" class="nav-logo">Solitaire Elite</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ── Page header ── -->
+  <div class="policy-header">
+    <h1>Support</h1>
+    <p class="updated">We're here to help.</p>
+  </div>
+
+  <!-- ── FAQ section ── -->
+  <div class="section">
+    <h2>Frequently asked questions</h2>
+
+    <h3>Is Solitaire Elite free?</h3>
+    <p>
+      Please check the App Store listing for current pricing. We may offer a free
+      version, a paid version, or optional in-app purchases. Check the listing for
+      the most up-to-date information.
+    </p>
+
+    <h3>Does the game require an internet connection?</h3>
+    <p>
+      No. Solitaire Elite works fully offline. You can play on a plane, subway,
+      or anywhere without Wi-Fi or cellular data.
+    </p>
+
+    <h3>How do I reset my scores or game history?</h3>
+    <p>
+      Go to your device's <strong>Settings → General → iPhone Storage</strong>,
+      find Solitaire Elite, and tap "Offload App" or delete and reinstall it.
+      This will clear all locally stored data.
+    </p>
+
+    <h3>My game progress was lost after reinstalling. Why?</h3>
+    <p>
+      Game data is stored locally on your device and is not backed up to the
+      cloud. Deleting or reinstalling the app will reset all progress. iCloud
+      backup may preserve some data depending on your device settings.
+    </p>
+
+    <h3>I found a bug. How do I report it?</h3>
+    <p>
+      Use the contact form below. Please include your device model, iOS version,
+      and a description of what happened. We read every message.
+    </p>
+  </div>
+
+  <!-- ── Contact form ── -->
+  <div class="section">
+    <h2>Send us a message</h2>
+    <p>Fill out the form below and we'll get back to you as soon as we can.</p>
+
+    <div class="form-wrap">
+      <!--
+        Formspree form: replace YOUR_FORMSPREE_ID below with your actual endpoint.
+        Steps:
+          1. Go to https://formspree.io and sign up for free
+          2. Create a new form and connect it to ticket_captcha99@icloud.com
+          3. Copy the endpoint (looks like https://formspree.io/f/abcdefgh)
+          4. Paste it as the action value below
+        Your email address never appears in this HTML file.
+      -->
+      <form
+        method="POST"
+        action="https://formspree.io/f/mqevazgw"
+      >
+        <!-- Formspree honeypot: bots fill this in; humans don't see it -->
+        <input type="text" name="_gotcha" style="display:none" />
+
+        <!-- Redirect to thank-you page after submission -->
+        <input type="hidden" name="_next" value="thanks.html" />
+
+        <div class="form-group">
+          <label for="name">Your name</label>
+          <input type="text" id="name" name="name" placeholder="Jane Smith" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" placeholder="you@example.com" required />
+        </div>
+
+        <div class="form-group">
+          <label for="topic">Topic</label>
+          <select id="topic" name="topic" required>
+            <option value="" disabled selected>Select a topic…</option>
+            <option value="bug">Bug report</option>
+            <option value="feature">Feature request</option>
+            <option value="account">Account or purchase</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" placeholder="Describe your issue or question…" required></textarea>
+        </div>
+
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
