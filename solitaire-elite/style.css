@@ -472,10 +472,74 @@ footer a:hover { color: var(--accent); text-decoration: none; }
 }
 .reveal.visible { opacity: 1; transform: translateY(0); }
 
+/* ----- Hamburger button (hidden on desktop) ----- */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  justify-self: end;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+/* Animate to X when open */
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ----- Mobile dropdown menu (hidden until hamburger clicked) ----- */
+.nav-mobile-menu {
+  display: none;
+  flex-direction: column;
+  gap: 0;
+  background: var(--bg-nav);
+  backdrop-filter: saturate(180%) blur(20px);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  border-bottom: 1px solid var(--border);
+  transition: background 0.3s ease;
+}
+.nav-mobile-menu.open { display: flex; }
+
+.nav-mobile-menu a {
+  font-size: 1rem;
+  color: var(--text);
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  opacity: 0.85;
+}
+.nav-mobile-menu a:hover { opacity: 1; text-decoration: none; }
+
+.nav-mobile-toggle {
+  padding: 14px 22px;
+  border-top: 1px solid var(--border);
+  background: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+  font-size: 0.9rem;
+  font-family: inherit;
+  color: var(--text-muted);
+  cursor: pointer;
+  text-align: left;
+}
+.nav-mobile-toggle:hover { color: var(--accent); }
+
 /* ----- Responsive ----- */
-@media (max-width: 600px) {
-  .nav-links { gap: 12px; }
-  .nav-company { font-size: 0.7rem; }
+@media (max-width: 700px) {
+  /* Switch nav from 3-col grid to left/center/hamburger */
+  .nav-right { display: none; }
+  .nav-hamburger { display: flex; }
+  .nav-company { font-size: 0.75rem; }
   .form-wrap { padding: 28px 20px; }
   .hero { padding: 72px 22px 56px; }
 }

@@ -14,6 +14,7 @@
     <div class="nav-inner">
       <a href="../index.html" class="nav-company">Digital Rembrandt</a>
       <a href="index.html" class="nav-logo">Solitaire Elite</a>
+      <!-- Right: page links + dark mode toggle (hidden on mobile) -->
       <div class="nav-right">
         <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
@@ -22,6 +23,17 @@
         </ul>
         <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
       </div>
+      <!-- Hamburger: visible only on mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown (toggled by hamburger) -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <button class="nav-mobile-toggle" id="themeToggleMobile">⏾ Dark</button>
     </div>
   </nav>
 
