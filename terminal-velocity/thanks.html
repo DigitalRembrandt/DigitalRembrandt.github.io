@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Message Sent | Terminal Velocity</title>
+  <link rel="stylesheet" href="style.css?v=3" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-company">Digital Rembrandt</a>
+      <a href="index.html" class="nav-logo">Terminal Velocity</a>
+      <!-- Right: page links + dark mode toggle (hidden on mobile) -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+      </div>
+      <!-- Hamburger: visible only on mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown (toggled by hamburger) -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <button class="nav-mobile-toggle" id="themeToggleMobile">⏾ Dark</button>
+    </div>
+  </nav>
+
+  <!-- ── Confirmation message ── -->
+  <div class="hero">
+    <p class="hero-eyebrow">Message received</p>
+    <h1>Thank you.</h1>
+    <p>We got your message and will be in touch as soon as possible.</p>
+    <a href="index.html" class="btn btn-primary">Back to Home</a>
+  </div>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
