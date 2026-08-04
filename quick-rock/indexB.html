@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>QuickRock — Mac Image Viewer</title>
+  <meta name="description" content="A lightning-fast image viewer for macOS. Browse folders with hundreds of thousands of images in seconds. Supports 70+ formats." />
+  <link rel="stylesheet" href="style.css?v=3" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-company">Digital Rembrandt</a>
+      <a href="index.html" class="nav-logo">QuickRock</a>
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+      </div>
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <button class="nav-mobile-toggle" id="themeToggleMobile">⏾ Dark</button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <img src="icon.jpg" alt="QuickRock app icon" class="hero-app-icon hero-load-1" />
+    <p class="hero-eyebrow hero-load-2">Available on the Mac App Store</p>
+    <h1 class="hero-load-3">QuickRock</h1>
+    <p class="hero-slogan hero-load-4">The image viewer built for speed.</p>
+    <p class="hero-load-5">
+      Browse folders containing hundreds of thousands of images in seconds.
+      A professional-grade viewer for macOS — not an editor, just a viewer, done right.
+    </p>
+    <a href="https://apps.apple.com/us/app/quickrock/id6795028454" class="btn btn-primary hero-load-6">Download on the Mac App Store</a>
+  </section>
+
+  <!-- ── Feature cards ── -->
+  <div class="features">
+    <div class="features-inner">
+      <h2 class="reveal">Everything a power user needs.</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card" data-delay="0">
+          <div class="icon-wrap"><span class="icon">⚡</span></div>
+          <h3>Blazing Fast</h3>
+          <p>QuickRock opens a folder of 200,000+ images in just a few seconds.
+             Its bounded memory model never loads the whole library — it stays
+             responsive no matter how large your collection grows.</p>
+        </div>
+
+        <div class="feature-card" data-delay="80">
+          <div class="icon-wrap"><span class="icon">📸</span></div>
+          <h3>70+ File Formats</h3>
+          <p>JPEG, PNG, HEIC, WebP, AVIF, JPEG XL, GIF, TIFF, BMP, PSD, TGA,
+             Radiance HDR, and every camera RAW format Apple supports — plus
+             OpenEXR with DWAA and DWAB compression that macOS itself cannot open.
+             Includes a QuickLook extension so EXR files preview in Finder just like any other image.</p>
+        </div>
+
+        <div class="feature-card" data-delay="160">
+          <div class="icon-wrap"><span class="icon">📁</span></div>
+          <h3>Powerful File Management</h3>
+          <p>Flag images with a single keypress for batch operations — copy, move, or
+             trash all flagged files at once. Apply Finder color tags on the fly.
+             Copy or move individual files to configured destinations. Undo the last
+             file operation with Cmd+Z. Nine persistent Folder Bookmarks for your
+             most-visited locations.</p>
+        </div>
+
+        <div class="feature-card" data-delay="240">
+          <div class="icon-wrap"><span class="icon">🔬</span></div>
+          <h3>Precision Inspection</h3>
+          <p>Live histogram with R/G/B and luminance channels. Exposure control for
+             examining HDR files. Isolate individual RGB channels or view the alpha
+             channel. A/B compare lets you pin one image and flash between it and the
+             current one at the same zoom and pan. Rich metadata and EXIF display.
+             Transparency can be shown against black, white, gray, or a checkerboard.</p>
+        </div>
+
+        <div class="feature-card accent-purple" data-delay="320">
+          <div class="icon-wrap"><span class="icon">🗂️</span></div>
+          <h3>Flexible Viewing</h3>
+          <p>Thumbnail filmstrip for fast visual navigation, a fullscreen thumbnail
+             grid, and clean distraction-free fullscreen viewing. Advanced filtering
+             by name, tag, file type, orientation, date, size, or dimensions — with
+             saveable presets. Sort by name, date, size, or dimensions. Slideshow
+             with six transition types, shuffle, and tag filtering.</p>
+        </div>
+
+        <div class="feature-card accent-blue" data-delay="400">
+          <div class="icon-wrap"><span class="icon">🎛️</span></div>
+          <h3>Fully Customizable</h3>
+          <p>Every keyboard shortcut is reassignable. The shortcut editor lets you
+             search by name, synonym, or description to find exactly what you need.
+             Mouse-click navigation, trackpad gestures, zoom behavior, background
+             color, on-screen controls, file name display — QuickRock adapts to
+             the way you work.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Supported formats section ── -->
+  <section class="section reveal" style="background: var(--bg-surface); max-width: 100%; transition: background 0.3s ease;">
+    <div style="max-width: 860px; margin: 0 auto; padding: 0 22px;">
+      <h2 style="font-size:1.65rem; font-weight:700; letter-spacing:-0.02em; margin-bottom:28px;">Supported image formats</h2>
+
+      <div class="format-grid">
+        <div class="format-group">
+          <h4>Standard raster</h4>
+          <p>JPEG &amp; JPEG XL, PNG, GIF, TIFF, BMP, WebP, HEIF/HEIC, AVIF,
+             JPEG 2000, MPO, Netpbm, Adobe Photoshop (PSD), Targa, SGI,
+             QuickDraw PICT, Windows ICO, Apple ICNS</p>
+        </div>
+        <div class="format-group">
+          <h4>HDR, film &amp; VFX</h4>
+          <p>OpenEXR — all 12 compression schemes including DWAA, DWAB, and HTJ2K
+             via QuickRock's bundled decoder. Opens files that Finder, QuickLook,
+             and Preview cannot. Radiance HDR.</p>
+        </div>
+        <div class="format-group">
+          <h4>Camera RAW</h4>
+          <p>Adobe DNG, Canon CR2/CR3, Nikon NEF/NRW, Sony ARW, Fujifilm RAF,
+             Panasonic RW2, Leica RWL, Olympus ORF, Pentax PEF, Samsung SRW,
+             Hasselblad 3FR, Phase One IIQ, and more — 17 brands, updated with each macOS release.</p>
+        </div>
+        <div class="format-group">
+          <h4>GPU textures &amp; specialist</h4>
+          <p>DirectDraw Surface (DDS), Khronos KTX, ASTC, PowerVR (PVR),
+             DICOM medical imaging. Roughly 70 file extensions across 40+ formats total.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Privacy callout ── -->
+  <section class="section privacy-callout reveal" style="text-align:center; max-width:100%; padding-left:22px; padding-right:22px;">
+    <div style="max-width:740px; margin:0 auto;">
+      <h2>Your privacy, by design.</h2>
+      <p>
+        QuickRock collects zero personal data. No analytics, no ads, no tracking. Ever.
+        Your files and metadata never leave your Mac.
+      </p>
+      <a href="privacy.html" class="btn btn-secondary" style="margin-top:8px;">Read our Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    // Scroll-reveal: .reveal elements
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // Scroll-reveal: feature cards with staggered delays
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay || 0, 10);
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.feature-card').forEach(el => cardObserver.observe(el));
+  </script>
+
+</body>
+</html>
