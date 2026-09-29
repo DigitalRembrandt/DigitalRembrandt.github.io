@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Turbo Challenge</title>
+  <meta name="description" content="A fast, bright arcade racer for iPhone. Drift through coastlines, ice roads, deserts and neon skylines on roads that never run out. The whole first season is free." />
+  <link rel="stylesheet" href="style.css?v=2" />
+  <script src="theme.js"></script>
+</head>
+<body>
+
+  <!-- ── Navigation ── -->
+  <nav>
+    <div class="nav-inner">
+      <a href="../index.html" class="nav-company">Digital Rembrandt</a>
+      <a href="index.html" class="nav-logo">Turbo Challenge</a>
+      <!-- Right: page links + dark mode toggle (hidden on mobile) -->
+      <div class="nav-right">
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="privacy.html">Privacy</a></li>
+          <li><a href="support.html">Support</a></li>
+        </ul>
+        <button class="theme-toggle" id="themeToggle">⏾ Dark</button>
+      </div>
+      <!-- Hamburger: visible only on mobile -->
+      <button class="nav-hamburger" id="navHamburger" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Mobile dropdown (toggled by hamburger) -->
+    <div class="nav-mobile-menu" id="navMobileMenu">
+      <a href="index.html">Home</a>
+      <a href="privacy.html">Privacy</a>
+      <a href="support.html">Support</a>
+      <button class="nav-mobile-toggle" id="themeToggleMobile">⏾ Dark</button>
+    </div>
+  </nav>
+
+  <!-- ── Hero ── -->
+  <section class="hero">
+    <img src="icon.png" alt="Turbo Challenge app icon" class="hero-app-icon hero-load-1" />
+    <p class="hero-eyebrow hero-load-2">Coming Soon to the App Store</p>
+    <h1 class="hero-load-3">Turbo Challenge</h1>
+    <p class="hero-slogan hero-load-4">Floor it. The road never ends.</p>
+    <p class="hero-load-5">
+      A fast, bright arcade racer for iPhone. Drift through golden coastlines, frozen
+      ice roads, desert heat and neon-lit skylines, with five rivals fighting you for
+      every podium, on roads that never run out.
+    </p>
+    <!--
+      When the game is live, replace this span with the real App Store link:
+      <a href="https://apps.apple.com/app/idXXXXXXXXXX" class="btn btn-primary hero-load-6">Download on the App Store</a>
+      and change the eyebrow above to "Now Available on the App Store".
+    -->
+    <span class="btn btn-soon hero-load-6">Coming Soon on the App Store</span>
+  </section>
+
+  <!-- ── Gallery ── -->
+  <section class="gallery-section reveal">
+
+    <div class="gallery-header">
+      <h2>See it in action.</h2>
+      <p>Sunset coastlines, storm-soaked highways, and rivals right on your bumper.</p>
+    </div>
+
+    <div class="gallery-scroll-wrap">
+      <div class="gallery-scroll" id="galleryScroll">
+        <div class="gallery-track" id="galleryTrack">
+
+          <!--
+            Screenshots from iPhone 14 Pro Max, 2796 x 1290, used as-is: the strip shows them
+            small and the lightbox opens the full-resolution file. To add one, copy an item
+            and give it the next data-index. A trailer goes first, in this shape:
+            <div class="gallery-item gallery-item--video" data-index="0" data-type="video" data-src="gallery/trailer_web.mp4">
+              <video muted loop playsinline preload="metadata">
+                <source src="gallery/trailer_web.mp4" type="video/mp4" />
+              </video>
+            </div>
+          -->
+
+          <!-- The App Preview, re-encoded for the web; the original stays in the project. -->
+          <div class="gallery-item gallery-item--video" data-index="0" data-type="video" data-src="gallery/TurboChallengePreview_3_web.mp4">
+            <video muted loop playsinline preload="metadata" poster="gallery/TurboChallengePreview_3_poster.jpg">
+              <source src="gallery/TurboChallengePreview_3_web.mp4" type="video/mp4" />
+            </video>
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="1" data-type="image">
+            <img src="gallery/3.jpg" alt="Speeding down City Street between gleaming sci-fi towers" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="2" data-type="image">
+            <img src="gallery/2.jpg" alt="Side by side with a rival on the snowbound Arctic Road" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="3" data-type="image">
+            <img src="gallery/1.jpg" alt="Racing a rival along the Coastal Cliffs at golden hour" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="4" data-type="image">
+            <img src="gallery/4.jpg" alt="Leading the field through the misty Forest Road" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="5" data-type="image">
+            <img src="gallery/5.jpg" alt="Chasing a rival along a palm-lined Desert Road" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="6" data-type="image">
+            <img src="gallery/6.jpg" alt="Leading through the rain on the Storm Coast" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="7" data-type="image">
+            <img src="gallery/7.jpg" alt="Racing under giant port cranes at a Building Site at sunset" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="8" data-type="image">
+            <img src="gallery/8.jpg" alt="Headlights cutting through the night on Town Street" loading="lazy" />
+          </div>
+
+          <div class="gallery-item gallery-item--image" data-index="9" data-type="image">
+            <img src="gallery/9.jpg" alt="The Turbo Challenge title screen on a golden-hour coastline" loading="lazy" />
+          </div>
+
+        </div><!-- /gallery-track -->
+      </div><!-- /gallery-scroll -->
+    </div><!-- /gallery-scroll-wrap -->
+
+  </section>
+
+  <!-- ── Feature cards ── -->
+  <div class="features">
+    <div class="features-inner">
+      <h2 class="reveal">Built for the thrill of the drive.</h2>
+      <div class="feature-grid">
+
+        <div class="feature-card accent-gold" data-delay="0">
+          <div class="icon-wrap"><span class="icon">🛣️</span></div>
+          <h3>Roads That Never Run Out</h3>
+          <p>Every track is a new road with its own sweepers, crests and straights, and it
+             stays exactly as you learned it, so every corner you master is yours to attack
+             again. The first season is only the beginning. The road just keeps going.</p>
+        </div>
+
+        <div class="feature-card" data-delay="80">
+          <div class="icon-wrap"><span class="icon">🌍</span></div>
+          <h3>A World Worth the Drive</h3>
+          <p>Golden-hour coastlines and palm-lined straights. Blazing desert, frozen ice roads,
+             misty forests, city streets lined with skyscrapers and gleaming sci-fi skylines, plus building sites
+             where giant port cranes straddle the road.</p>
+        </div>
+
+        <div class="feature-card accent-blue" data-delay="160">
+          <div class="icon-wrap"><span class="icon">🌧️</span></div>
+          <h3>Weather, Day and Night</h3>
+          <p>Race through sunshine, rain, snow and fog, from noon heat to stormy nights. Rain
+             leaves standing water that throws up spray behind every car, and after dark your
+             headlights carve a path through the night.</p>
+        </div>
+
+        <div class="feature-card" data-delay="240">
+          <div class="icon-wrap"><span class="icon">🏆</span></div>
+          <h3>Five Rivals, One Championship</h3>
+          <p>Every race is a real fight against five rival drivers. Seasons run eight races
+             deep, every result counts toward the championship, and the table at the end of
+             each season shows exactly where you stand.</p>
+        </div>
+
+        <div class="feature-card accent-pink" data-delay="320">
+          <div class="icon-wrap"><span class="icon">🔥</span></div>
+          <h3>Turbo and Drift</h3>
+          <p>Throw the tail out through the bends and hold the slide, then hit TURBO and watch
+             the world blur as flames pour from the exhausts. Haptics let you feel every curb,
+             bump and crash, all to a soundtrack made for the game.</p>
+        </div>
+
+        <div class="feature-card" data-delay="400">
+          <div class="icon-wrap"><span class="icon">🚗</span></div>
+          <h3>Three Cars in the Garage</h3>
+          <p>A thundering muscle car, a low-slung sports car and a nimble coupe. Pick your
+             favorite, or switch between them whenever the mood takes you.</p>
+        </div>
+
+        <div class="feature-card accent-purple" data-delay="480">
+          <div class="icon-wrap"><span class="icon">🎮</span></div>
+          <h3>Play Your Way</h3>
+          <p>Arcade gives you three lives, with health packs on the road to win one back.
+             Cruise is pure, endless driving. Choose Easy, Medium or Hard, put the touch
+             controls at the top or bottom of the screen, or pair a game controller.</p>
+        </div>
+
+        <div class="feature-card" data-delay="560">
+          <div class="icon-wrap"><span class="icon">🎥</span></div>
+          <h3>Five Camera Views</h3>
+          <p>Chase the action, pull back for the wide view, drop to the bumper, ride the hood
+             as the horizon rolls with every lean, or go car-free on the road view. Add a
+             rear-view mirror to see who's closing in.</p>
+        </div>
+
+        <div class="feature-card accent-gold" data-delay="640">
+          <div class="icon-wrap"><span class="icon">📊</span></div>
+          <h3>Every Race Remembered</h3>
+          <p>Your racing career, beautifully charted: distance driven, time on track, wins,
+             podiums, clean races, top speeds and your fastest runs. Watch yourself get
+             faster, one race at a time.</p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- ── Free-season offer ── -->
+  <section class="offer reveal">
+    <div class="offer-inner">
+      <p class="offer-eyebrow">Start free</p>
+      <h2>The whole first season is on us.</h2>
+      <p>
+        Eight full races, both game modes and every camera view: the complete first
+        championship is free. No trial timer, no ads, no catch.
+      </p>
+      <p>
+        Ready for more? One in-app purchase unlocks the road beyond, with every track past
+        the first season and every car in the garage.
+      </p>
+      <ul class="offer-pills">
+        <li>One payment</li>
+        <li>No ads</li>
+        <li>No subscription</li>
+        <li>Nothing else to buy</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ── Privacy callout ── -->
+  <section class="section privacy-callout reveal" style="text-align:center; max-width:100%; padding-left:22px; padding-right:22px;">
+    <div style="max-width:740px; margin:0 auto;">
+      <h2>Your privacy, by design.</h2>
+      <p>
+        Turbo Challenge collects zero personal data. No analytics, no ads, no tracking, no
+        account. Your races, records and settings stay on your iPhone, and your purchase is
+        handled entirely by Apple.
+      </p>
+      <a href="privacy.html" class="btn btn-secondary" style="margin-top:8px;">Read our Privacy Policy</a>
+    </div>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="index.html">Home</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="support.html">Support</a>
+      </div>
+      <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Robert Eriksson. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ── Lightbox overlay ── -->
+  <div class="lb-overlay" id="lbOverlay" role="dialog" aria-modal="true" aria-label="Gallery viewer">
+    <button class="lb-close" id="lbClose" aria-label="Close">✕</button>
+    <button class="lb-arrow lb-prev" id="lbPrev" aria-label="Previous">‹</button>
+    <div class="lb-media-wrap" id="lbMediaWrap"></div>
+    <button class="lb-arrow lb-next" id="lbNext" aria-label="Next">›</button>
+    <div class="lb-dots" id="lbDots"></div>
+  </div>
+
+  <script>
+    // ── Scroll-reveal: .reveal elements ──
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+    document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+    // ── Scroll-reveal: feature cards with staggered delays ──
+    const cardObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const delay = parseInt(entry.target.dataset.delay || 0, 10);
+          setTimeout(() => entry.target.classList.add('visible'), delay);
+          cardObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+
+    document.querySelectorAll('.feature-card').forEach(el => cardObserver.observe(el));
+
+    // ── Video autoplay on scroll, for when trailers join the gallery ──
+    (function () {
+      const galleryScroll = document.getElementById('galleryScroll');
+      const videoPlayObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const video = entry.target.querySelector('video');
+          if (!video) return;
+          if (entry.isIntersecting) {
+            video.play().catch(() => {});
+          } else {
+            video.pause();
+          }
+        });
+      }, { root: galleryScroll, threshold: 0.4 });
+
+      document.querySelectorAll('.gallery-item--video').forEach(el => videoPlayObserver.observe(el));
+    })();
+
+    // ── Lightbox ──
+    (function () {
+      const items     = Array.from(document.querySelectorAll('.gallery-item'));
+      const overlay   = document.getElementById('lbOverlay');
+      const mediaWrap = document.getElementById('lbMediaWrap');
+      const lbClose   = document.getElementById('lbClose');
+      const lbPrev    = document.getElementById('lbPrev');
+      const lbNext    = document.getElementById('lbNext');
+      const dotsEl    = document.getElementById('lbDots');
+
+      let current = 0;
+
+      items.forEach((_, i) => {
+        const dot = document.createElement('button');
+        dot.className = 'lb-dot';
+        dot.setAttribute('aria-label', 'Item ' + (i + 1));
+        dot.addEventListener('click', (e) => { e.stopPropagation(); show(i); });
+        dotsEl.appendChild(dot);
+      });
+
+      const dots = Array.from(dotsEl.querySelectorAll('.lb-dot'));
+
+      function clearMedia() {
+        const vid = mediaWrap.querySelector('video');
+        if (vid) { vid.pause(); vid.removeAttribute('src'); vid.load(); }
+        mediaWrap.innerHTML = '';
+      }
+
+      function show(index) {
+        current = (index + items.length) % items.length;
+        const item = items[current];
+        clearMedia();
+
+        if (item.dataset.type === 'video') {
+          const vid = document.createElement('video');
+          vid.controls = true;
+          vid.autoplay = true;
+          vid.setAttribute('playsinline', '');
+          const source = document.createElement('source');
+          source.src = item.dataset.src;
+          source.type = 'video/mp4';
+          vid.appendChild(source);
+          vid.addEventListener('click', e => e.stopPropagation());
+          mediaWrap.appendChild(vid);
+        } else {
+          const srcImg = item.querySelector('img');
+          const img = document.createElement('img');
+          img.src = srcImg.src;
+          img.alt = srcImg.alt;
+          mediaWrap.appendChild(img);
+        }
+
+        dots.forEach((d, i) => d.classList.toggle('active', i === current));
+        overlay.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        clearMedia();
+        overlay.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      items.forEach((item, i) => item.addEventListener('click', () => show(i)));
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
+      lbNext.addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
+      overlay.addEventListener('click', (e) => { if (e.target === overlay) close(); });
+
+      document.addEventListener('keydown', (e) => {
+        if (!overlay.classList.contains('open')) return;
+        if (e.key === 'Escape')     close();
+        if (e.key === 'ArrowLeft')  show(current - 1);
+        if (e.key === 'ArrowRight') show(current + 1);
+      });
+    })();
+  </script>
+
+</body>
+</html>

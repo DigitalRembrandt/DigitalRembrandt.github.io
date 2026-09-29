@@ -228,6 +228,14 @@ nav {
 }
 .btn-secondary:hover { opacity: 0.85; text-decoration: none; }
 
+/* Stands where the App Store button will go, until the game is live.
+   The eyebrow's cyan, deepened so white text stays readable on it. */
+.btn-soon {
+  background: linear-gradient(90deg, #0098d4 0%, #0060d0 100%);
+  color: #fff;
+  cursor: default;
+}
+
 /* ----- Content sections ----- */
 .section {
   max-width: 740px;

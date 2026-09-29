@@ -228,6 +228,13 @@ nav {
 }
 .btn-secondary:hover { opacity: 0.85; text-decoration: none; }
 
+/* Stands where the App Store button will go, until the app is live */
+.btn-soon {
+  background: linear-gradient(90deg, #0071e3 0%, #bf5af2 100%);
+  color: #fff;
+  cursor: default;
+}
+
 /* ----- Content sections ----- */
 .section {
   max-width: 740px;

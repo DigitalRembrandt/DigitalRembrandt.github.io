@@ -22,19 +22,19 @@
 }
 
 body.dark {
-  --bg:           #0a0a0f;
-  --bg-surface:   #13131e;
-  --bg-card:      #1c1c2e;
-  --bg-nav:       rgba(10,10,15,0.88);
+  --bg:           #111118;       /* lifted from #0a0a0f — less pitch black     */
+  --bg-surface:   #181825;       /* lifted from #13131e                        */
+  --bg-card:      #21213a;       /* lifted from #1c1c2e                        */
+  --bg-nav:       rgba(17,17,24,0.90);
   --text:         #f5f5f7;
-  --text-body:    #c0c0cc;
-  --text-muted:   #8e8ea8;
-  --border:       #2e2e48;
+  --text-body:    #c8c8d8;       /* slightly brighter than #c0c0cc             */
+  --text-muted:   #9090a8;
+  --border:       #2e2e4a;
   --shadow:       rgba(0,0,0,0.4);
   --shadow-lg:    rgba(0,0,0,0.6);
-  /* Hero: vivid deep blue → deep purple wash */
-  --hero-start:   #0d1840;
-  --hero-mid:     #1a0838;
+  /* Hero: distinct cyan-blue → magenta, both light enough to read against bg  */
+  --hero-start:   #08284c;       /* ocean blue — clearly distinct from bg      */
+  --hero-mid:     #30084e;       /* deep magenta-violet                        */
   /* Logo is white — no filter needed in dark mode */
   --logo-filter:  none;
 }
@@ -129,7 +129,7 @@ nav {
   font-size: 1.18rem;
   font-weight: 500;
   /* gradient text matching the Solitaire Elite accent */
-  background: linear-gradient(90deg, #0071e3 0%, #bf5af2 100%);
+  background: linear-gradient(90deg, #28a8f0 0%, #cc44f0 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
